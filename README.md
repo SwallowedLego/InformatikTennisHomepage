@@ -47,7 +47,7 @@
     <div class="section">
         <strong>Umsatzsteuer-ID</strong><br>
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
-        [USt-IdNr.]
+        [DE124356789.]
     </div>
 
     <div class="section">
