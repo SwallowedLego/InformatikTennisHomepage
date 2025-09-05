@@ -1,1 +1,181 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informatik Tennis Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+        nav {
+            background: #34495e;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #e67e22;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.07);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero img {
+            width: 220px;
+            border-radius: 50%;
+            box-shadow: 0 2px 14px rgba(44,62,80,0.12);
+        }
+        .hero h2 {
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+        .feature {
+            background: #fafafa;
+            border: 1px solid #ececec;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1 1 250px;
+            min-width: 220px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #555;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 22px 10px;
+            margin-top: 50px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .features {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informatik Tennis Club</h1>
+        <p>Your tennis journey starts here!</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Tennis Club">
+            <h2>Welcome to Informatik Tennis Club</h2>
+            <p>
+                We are a friendly tennis club offering high-quality courts, coaching, and a vibrant community for all ages and skill levels. Join us to play, improve, and make new friends!
+            </p>
+        </div>
+        <div class="features">
+            <div class="feature">
+                <h3>Modern Courts</h3>
+                <p>Enjoy playing on our state-of-the-art tennis courts, available year-round for members and guests.</p>
+            </div>
+            <div class="feature">
+                <h3>Coaching & Training</h3>
+                <p>Professional coaches offer group and private lessons for beginners, juniors, and advanced players.</p>
+            </div>
+            <div class="feature">
+                <h3>Club Events</h3>
+                <p>Participate in regular tournaments, social events, and team competitions for fun and skill development.</p>
+            </div>
+            <div class="feature">
+                <h3>Community</h3>
+                <p>Become part of a welcoming club community! Meet new friends and play with others of your level.</p>
+            </div>
+        </div>
+        <section id="about" style="margin-top: 50px;">
+            <h2>About Us</h2>
+            <p>
+                Founded in 2020, Informatik Tennis Club is dedicated to promoting tennis in our region. We welcome players of all backgrounds and ages. Our club is run by passionate volunteers and certified professionals.
+            </p>
+        </section>
+        <section id="services" style="margin-top: 40px;">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Membership for individuals and families</li>
+                <li>Court rental for guests</li>
+                <li>Coaching programs for all levels</li>
+                <li>Junior tennis academy</li>
+                <li>Social and competitive events</li>
+            </ul>
+        </section>
+        <section id="events" style="margin-top: 40px;">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Open Day - September 21</li>
+                <li>Autumn Tournament - October 12</li>
+                <li>Weekly Social Evenings - Every Friday</li>
+            </ul>
+        </section>
+        <section id="contact" style="margin-top: 40px;">
+            <h2>Contact Us</h2>
+            <p>
+                Email: info@informatiktennisclub.com<br>
+                Phone: +49 123 456789<br>
+                Address: Musterstraße 12, 12345 Berlin
+            </p>
+            <p>
+                <a href="mailto:info@informatiktennisclub.com" style="color:#2c3e50;">Send us an email</a>
+            </p>
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Informatik Tennis Club. All rights reserved.
+    </footer>
+</body>
+</html>
