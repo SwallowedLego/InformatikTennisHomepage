@@ -18,22 +18,22 @@
     <div class="section">
         <strong>Angaben gemäß § 5 TMG</strong><br>
         <address>
-            <strong>[Name des Betreibers/Vereins]</strong><br>
-            [Adresse]<br>
-            [PLZ, Stadt]<br>
-            [Land, falls außerhalb Deutschlands]
+            <strong>[Donald Duck]</strong><br>
+            [boingstraße123]<br>
+            [33345,Entenhausen]<br>
+            [Entenhausen]
         </address>
     </div>
 
     <div class="section">
         <strong>Vertreten durch:</strong><br>
-        [Name des Vertretungsberechtigten, z.B. Vereinsvorstand]
+        [Dagobert Duck]
     </div>
 
     <div class="section">
         <strong>Kontakt</strong><br>
-        Telefon: [Telefonnummer]<br>
-        E-Mail: <a href="mailto:[E-Mail-Adresse]">[E-Mail-Adresse]</a><br>
+        Telefon: [+77 123456789]<br>
+        E-Mail: <a href="mailto:[ich@docladduck.et]">[ich@donaldduck.et]</a><br>
         Website: <a href="[Domain der Homepage]">[Domain der Homepage]</a>
     </div>
 
