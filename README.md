@@ -34,7 +34,7 @@
         <strong>Kontakt</strong><br>
         Telefon: [+77 123456789]<br>
         E-Mail: <a href="mailto:[ich@docladduck.et]">[ich@donaldduck.et]</a><br>
-        Website: <a href="[https://swallowedlego.github.io/InformatikTennisHomepage/]">[Domain der Homepage]</a>
+        Website: <a href="[https://swallowedlego.github.io/InformatikTennisHomepage/]">[google]</a>
     </div>
 
     <div class="section">
