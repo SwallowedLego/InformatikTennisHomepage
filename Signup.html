@@ -1,10 +1,16 @@
 <form action="https://script.google.com/macros/s/AKfycbyez0rfiRzS_wHgjIn9P77pI9RnhTN4H749_js3Bt7JoEHhYzVcwWX_3zPK28ifbRykhg/exec" method="post">
-  <input type="text" name="first_name" placeholder="Vorname">
-  <input type="text" name="last_name" placeholder="Nachname">
+  <input type="text" name="first_name" placeholder="Vorname" required>
+  <input type="text" name="last_name" placeholder="Nachname" required>
   <input type="text" name="telephone" placeholder="Telefon">
-  <input type="email" name="email" placeholder="E-Mail">
-  <input type="checkbox" name="plan_basic" value="Basic"> Basic
-  <input type="checkbox" name="plan_family" value="Family"> Family
-  <input type="checkbox" name="plan_premium" value="Premium"> Premium
+  <input type="email" name="email" placeholder="E-Mail" required>
+  <label>
+    <input type="checkbox" name="plan_basic" value="Basic"> Basic
+  </label>
+  <label>
+    <input type="checkbox" name="plan_family" value="Family"> Family
+  </label>
+  <label>
+    <input type="checkbox" name="plan_premium" value="Premium"> Premium
+  </label>
   <button type="submit">Absenden</button>
 </form>
