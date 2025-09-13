@@ -1,49 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Tennis Club Signup</title>
-</head>
-<body>
-  <h2>Sign up for Tennis Club</h2>
-  <form action="https://script.google.com/macros/s/AKfycbyez0rfiRzS_wHgjIn9P77pI9RnhTN4H749_js3Bt7JoEHhYzVcwWX_3zPK28ifbRykhg/exec" method="POST" target="_blank">
-    <label>
-      First Name:
-      <input type="text" name="first_name" required>
-    </label>
-    <br>
-    <label>
-      Last Name:
-      <input type="text" name="last_name" required>
-    </label>
-    <br>
-    <label>
-      Telephone Number:
-      <input type="tel" name="telephone" required>
-    </label>
-    <br>
-    <label>
-      Email Address:
-      <input type="email" name="email" required>
-    </label>
-    <br><br>
-    <strong>Select Membership Plan:</strong><br>
-    <label>
-      <input type="checkbox" name="plan_basic" value="Basic: €20/month – Access to courts and club events">
-      Basic: €20/month – Access to courts and club events
-    </label>
-    <br>
-    <label>
-      <input type="checkbox" name="plan_family" value="Family: €50/month – Membership for up to 5 family members">
-      Family: €50/month – Membership for up to 5 family members
-    </label>
-    <br>
-    <label>
-      <input type="checkbox" name="plan_premium" value="Premium: €80/month – Includes coaching sessions and priority bookings">
-      Premium: €80/month – Includes coaching sessions and priority bookings
-    </label>
-    <br><br>
-    <button type="submit">Submit</button>
-  </form>
-</body>
-</html>
+<form action="https://script.google.com/macros/s/AKfycbyez0rfiRzS_wHgjIn9P77pI9RnhTN4H749_js3Bt7JoEHhYzVcwWX_3zPK28ifbRykhg/exec" method="post">
+  <input type="text" name="first_name" placeholder="Vorname">
+  <input type="text" name="last_name" placeholder="Nachname">
+  <input type="text" name="telephone" placeholder="Telefon">
+  <input type="email" name="email" placeholder="E-Mail">
+  <input type="checkbox" name="plan_basic" value="Basic"> Basic
+  <input type="checkbox" name="plan_family" value="Family"> Family
+  <input type="checkbox" name="plan_premium" value="Premium"> Premium
+  <button type="submit">Absenden</button>
+</form>
