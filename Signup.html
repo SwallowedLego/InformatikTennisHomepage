@@ -1,20 +1,16 @@
-function doPost(e) {
-  // Deine echte Sheet-ID hier eintragen!
-  var sheet = SpreadsheetApp.openById('https://script.google.com/macros/s/AKfycbyez0rfiRzS_wHgjIn9P77pI9RnhTN4H749_js3Bt7JoEHhYzVcwWX_3zPK28ifbRykhg/exec').getSheetByName('Sheet1');
-  if (!sheet) {
-    return ContentService.createTextOutput("Fehler: Sheet1 nicht gefunden!").setMimeType(ContentService.MimeType.TEXT);
-  }
-
-  var vorname = e.parameter.first_name || '';
-  var nachname = e.parameter.last_name || '';
-  var telefon = e.parameter.telephone || '';
-  var email = e.parameter.email || '';
-  var plaene = [];
-  if (e.parameter.plan_basic) plaene.push(e.parameter.plan_basic);
-  if (e.parameter.plan_family) plaene.push(e.parameter.plan_family);
-  if (e.parameter.plan_premium) plaene.push(e.parameter.plan_premium);
-  var plan = plaene.join(', ');
-
-  sheet.appendRow([vorname, nachname, telefon, email, plan]);
-  return ContentService.createTextOutput("Erfolg").setMimeType(ContentService.MimeType.TEXT);
-}
+<form action="https://script.google.com/macros/s/AKfycbyez0rfiRzS_wHgjIn9P77pI9RnhTN4H749_js3Bt7JoEHhYzVcwWX_3zPK28ifbRykhg/exec" method="post">
+  <input type="text" name="first_name" placeholder="Vorname" required>
+  <input type="text" name="last_name" placeholder="Nachname" required>
+  <input type="text" name="telephone" placeholder="Telefon">
+  <input type="email" name="email" placeholder="E-Mail" required>
+  <label>
+    <input type="checkbox" name="plan_basic" value="Basic"> Basic
+  </label>
+  <label>
+    <input type="checkbox" name="plan_family" value="Family"> Family
+  </label>
+  <label>
+    <input type="checkbox" name="plan_premium" value="Premium"> Premium
+  </label>
+  <button type="submit">Absenden</button>
+</form>
