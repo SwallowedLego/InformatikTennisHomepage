@@ -1,0 +1,72 @@
+!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Namen eingeben</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #f9f9f9;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .form-container {
+            background: #fff;
+            padding: 32px 26px;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(44,139,242,0.08);
+            min-width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #2C8BF2;
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            margin-top: 16px;
+            color: #333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .btn {
+            width: 100%;
+            background: #2C8BF2;
+            color: #fff;
+            font-size: 1.1em;
+            padding: 10px 0;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 18px;
+            transition: background 0.15s;
+        }
+        .btn:hover {
+            background: #1762b8;
+        }
+    </style>
+</head>
+<body>
+    <form class="form-container" onsubmit="event.preventDefault(); window.location.href='angemeldet.html';">
+        <h2>Namen eingeben</h2>
+        <label for="vorname">Vorname</label>
+        <input type="text" id="vorname" name="vorname" required>
+        <label for="nachname">Nachname</label>
+        <input type="text" id="nachname" name="nachname" required>
+        <button type="submit" class="btn">Absenden</button>
+    </form>
+</body>
+</html>
