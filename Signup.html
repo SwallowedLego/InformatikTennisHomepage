@@ -2,47 +2,199 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Sign Up Formular</title>
+  <title>Abo Anmeldung</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; margin: 2em; }
-    form { max-width: 400px; margin: auto; }
-    input[type="text"], input[type="email"] {
-      display: block;
-      margin-bottom: 1em;
-      width: 100%;
-      padding: 0.5em;
-      box-sizing: border-box;
+    :root {
+      --primary: #2C8BF2;
+      --background: #f4f4f4;
+      --card-bg: #fff;
+      --border-radius: 12px;
+      --shadow: 0 6px 24px rgba(44,139,242,0.08);
     }
-    label { display: block; margin-bottom: 0.5em; }
-    button { padding: 0.7em 1.2em; }
-    .confirmation { color: green; margin-top: 1em; text-align: center; }
-    .error { color: red; margin-top: 1em; text-align: center; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background-color: var(--background);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .form-container {
+      background: var(--card-bg);
+      padding: 40px 32px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-size: 2.2em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .input-group {
+      margin-bottom: 20px;
+    }
+    .input-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 1em;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      font-size: 1em;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .plan-section {
+      margin: 28px 0;
+    }
+    .plan-section-title {
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #333;
+      font-size: 1.1em;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: #fafafa;
+    }
+    .checkbox-label:hover {
+      border-color: var(--primary);
+      background: #f7fbff;
+    }
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      cursor: pointer;
+      accent-color: var(--primary);
+    }
+    .checkbox-label span {
+      font-weight: 500;
+      color: #333;
+    }
+    button[type="submit"] {
+      width: 100%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1.1em;
+      padding: 14px 0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 24px;
+      transition: background 0.2s;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    button[type="submit"]:hover {
+      background: #1762b8;
+    }
+    .confirmation {
+      color: #22bb33;
+      margin-top: 20px;
+      text-align: center;
+      padding: 12px;
+      background: #f0fdf4;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .error {
+      color: #dc2626;
+      margin-top: 20px;
+      text-align: center;
+      padding: 12px;
+      background: #fef2f2;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      .form-container {
+        padding: 24px 20px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Sign Up</h1>
-  <form id="signup-form" action="https://script.google.com/macros/s/AKfycbwBvVI8yyawXrUnW94Gg8v4pYlWoV9MXho9-gtuX6Bpmd0G0B0G2-L3vte0U9ivNRI4Og/exec" method="POST">
-    <input type="text" name="first_name" placeholder="Vorname" required>
-    <input type="text" name="last_name" placeholder="Nachname" required>
-    <input type="text" name="telephone" placeholder="Telefon">
-    <input type="email" name="email" placeholder="E-Mail" required>
-    <label>
-      <input type="checkbox" name="plan_basic" value="Basic"> Basic
-    </label>
-    <label>
-      <input type="checkbox" name="plan_family" value="Family"> Family
-    </label>
-    <label>
-      <input type="checkbox" name="plan_premium" value="Premium"> Premium
-    </label>
-    <button type="submit">Absenden</button>
-    <div class="confirmation" id="confirmation" style="display:none;">
-      Vielen Dank für Ihre Anmeldung!
-    </div>
-    <div class="error" id="error" style="display:none;">
-      Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.
-    </div>
-  </form>
+  <div class="form-container">
+    <h1>Abo Anmeldung</h1>
+    <form id="signup-form" action="https://script.google.com/macros/s/AKfycbwBvVI8yyawXrUnW94Gg8v4pYlWoV9MXho9-gtuX6Bpmd0G0B0G2-L3vte0U9ivNRI4Og/exec" method="POST">
+      <div class="input-group">
+        <label for="first_name">Vorname</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Ihr Vorname" required>
+      </div>
+      <div class="input-group">
+        <label for="last_name">Nachname</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Ihr Nachname" required>
+      </div>
+      <div class="input-group">
+        <label for="telephone">Telefon</label>
+        <input type="text" id="telephone" name="telephone" placeholder="Ihre Telefonnummer">
+      </div>
+      <div class="input-group">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+      </div>
+      <div class="plan-section">
+        <div class="plan-section-title">Wählen Sie Ihren Abo-Plan:</div>
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="plan_basic" value="Basic">
+            <span>Basic – €20/Monat</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="plan_family" value="Family">
+            <span>Family – €50/Monat</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="plan_premium" value="Premium">
+            <span>Premium – €80/Monat</span>
+          </label>
+        </div>
+      </div>
+      <button type="submit">Absenden</button>
+      <div class="confirmation" id="confirmation" style="display:none;">
+        Vielen Dank für Ihre Anmeldung!
+      </div>
+      <div class="error" id="error" style="display:none;">
+        Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.
+      </div>
+    </form>
+  </div>
   <script>
     document.getElementById('signup-form').addEventListener('submit', function(e) {
       e.preventDefault();
