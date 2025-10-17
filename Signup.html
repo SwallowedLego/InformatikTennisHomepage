@@ -93,7 +93,8 @@
       border-color: var(--primary);
       background: #f7fbff;
     }
-    .checkbox-label input[type="checkbox"] {
+    .checkbox-label input[type="checkbox"],
+    .checkbox-label input[type="radio"] {
       width: 18px;
       height: 18px;
       margin-right: 12px;
@@ -173,15 +174,15 @@
         <div class="plan-section-title">Wählen Sie Ihren Abo-Plan:</div>
         <div class="checkbox-group">
           <label class="checkbox-label">
-            <input type="checkbox" name="plan_basic" value="Basic">
+            <input type="radio" name="plan" value="Basic">
             <span>Basic – €20/Monat</span>
           </label>
           <label class="checkbox-label">
-            <input type="checkbox" name="plan_family" value="Family">
+            <input type="radio" name="plan" value="Family">
             <span>Family – €50/Monat</span>
           </label>
           <label class="checkbox-label">
-            <input type="checkbox" name="plan_premium" value="Premium">
+            <input type="radio" name="plan" value="Premium">
             <span>Premium – €80/Monat</span>
           </label>
         </div>
